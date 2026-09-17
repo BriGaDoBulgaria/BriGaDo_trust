@@ -1,0 +1,115 @@
+#mainPageStatusRow {
+    width: 100%;
+    padding: 20px 0;
+}
+
+#mainPageStatusRowGrid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.status-card {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 15px 20px;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    background: white;
+    min-width: 250px;
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.status-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.status-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.status-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.status-text h5 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #154d29;
+    line-height: 1.2;
+}
+
+.status-text p {
+    margin: 2px 0 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+    white-space: nowrap;
+}
+
+/* От 800px надолу - решетка 2x2 */
+@media (max-width: 800px) {
+    #mainPageStatusRowGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 0 15px;
+    }
+    
+    .status-card {
+        min-width: 0;
+        width: 100%;
+        padding: 12px;
+        gap: 10px;
+    }
+    
+    .status-card img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .status-text h5 {
+        font-size: 1.4rem;
+    }
+    
+    .status-text p {
+        font-size: 0.8rem;
+        white-space: normal;
+        line-height: 1.3;
+    }
+}
+
+/* Много малки екрани - 1 колона */
+@media (max-width: 600px) {
+    #mainPageStatusRowGrid {
+        grid-template-columns: 1fr;
+        justify-items: center; /* Центрира самите карти в грида */
+    }
+    
+    .status-card {
+        width: 100%;
+        max-width: 350px; /* Ограничава ширината, за да не е до ръба */
+        justify-content: center; /* Центрира съдържанието хоризонтално */
+        text-align: left; /* Текстът остава ляво подравнен */
+        padding: 20px;
+    }
+    
+ 
+    .status-card {
+        text-align: center;
+        flex-direction: column; /* Икона отгоре, текст отдолу */
+    }
+
+}

@@ -1,0 +1,143 @@
+/* Основни стилове */
+#mainText {
+    font-size: clamp(1.5rem, 3vw, 4rem);
+    font-weight: bolder;
+    text-align: left;
+}
+
+#mainText #everyMonth {
+    color: #154d29;
+}
+
+#mainPageSubText {
+    font-size: 20px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+/* Контейнер за бутоните - центрирай с flexbox */
+#mainPageButtonRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start; /* По подразбиране вляво */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Стилове за бутоните */
+.mainPageText .btn {
+    height: 60px;
+    padding: 10px 20px;
+    font-size: 17px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+#mainTextEmployeeRegister {
+    color: #154d29;
+    border: 3px solid #aeaeae;
+    background: transparent;
+}
+
+#mainTextEmployerRegister {
+    background-color: #154d29;
+    color: white;
+    border: 3px solid #154d29;
+}
+
+#mainTextMiddlemanRegister {
+    color: #95191a;
+    border: 3px solid #95191a;
+    background: transparent;
+}
+
+#dataGuarantee {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+#dataGuarantee img {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+
+
+/* Центриране на всичко под 1000px */
+@media (max-width: 1200px) {
+    
+    /* Центриране на текста */
+    #mainText,
+    #mainPageSubText {
+        text-align: center;
+    }
+
+    /* Центриране на бутоните */
+    #mainPageButtonRow,#mainText,#everyMonth {
+        display: flex;
+        flex-direction: column; /* Подрежда ги вертикално */
+        align-items: center;    /* Центрира ги хоризонтално */
+        justify-content: center;
+        gap: 15px;              /* Разстояние между бутоните */
+        margin: 0 auto;         /* Центрира самия контейнер */
+        width: 100%;
+    }
+
+    /* Центриране на самите бутони (ако не са на 100% ширина) */
+    .mainPageText .btn {
+        width: 100%;
+        max-width: 350px;       /* Ограничава ширината, за да не са до ръба */
+        margin: 0;              /* Без излишни margin-и */
+        height: 50px;
+        font-size: 16px;
+    }
+
+    /* Центриране на малкия текст с анонимността */
+    #dataGuarantee {
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+/* Breakpoint 2: 800px - намали още бутоните */
+@media (max-width: 800px) {
+    .mainPageText .btn {
+        height: 40px;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+
+/* Breakpoint 3: 500px - подреди бутоните вертикално и ги центрирай */
+@media (max-width: 400px) {
+    #mainPageButtonRow {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .mainPageText .btn {
+        width: 100%;
+        max-width: 300px;
+        height: 45px;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    #mainPageSubText {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    #mainText {
+        text-align: center;
+    }
+}

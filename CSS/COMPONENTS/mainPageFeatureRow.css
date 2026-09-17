@@ -1,0 +1,49 @@
+#mainPageFeatureRowGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* Ограничава грида до 1200px */
+    margin: 0 auto; /* Центрира грида */
+}
+
+@media screen and (max-width:1200px) {
+    #mainPageFeatureRowGrid {
+        grid-template-columns: 1fr 1fr; /* 2 колони */
+    }
+}
+
+@media screen and (max-width:600px) {
+    #mainPageFeatureRowGrid {
+        grid-template-columns: 1fr; /* 1 колона */
+    }
+}
+
+.card {
+    width: 100% !important; /* Картата заема 100% от колоната */
+    width: 300px; /* Максимална ширина, за да не е прекалено широка */
+    height: 300px !important;
+    margin: 0 auto; /* Центрира картата в колоната */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card img {
+    width: 64px;
+    height: 64px;
+    margin: 20px auto 20px auto; /* Центрира иконата */
+}
+
+.card h5 {
+    margin: 0 0 10px 0 !important;
+    text-align: center;
+}
+
+.card p {
+    margin: 0;
+    text-align: center;
+    padding: 0 20px;
+}

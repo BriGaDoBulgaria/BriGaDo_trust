@@ -1,0 +1,46 @@
+
+#mainPageText-placeholder{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+
+#mainPageSeperation{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+#mainPageTrustScore-placeholder{
+    margin-left: 150px;
+}
+
+
+@media (max-width:1200px){
+#mainPageSeperation{
+    display: flex;
+    flex-direction: column;
+}
+#mainPageText-placeholder{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+}
+
+@media (max-width:1500px){
+#mainPageTrustScore-placeholder{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px !important;
+}
+}
+
+#mainPageFeatureRow-placeholder {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Центрира грида хоризонтално */
+    box-sizing: border-box;
+}
