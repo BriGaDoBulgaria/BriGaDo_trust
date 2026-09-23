@@ -46,5 +46,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         { selector: '#mainPageTrustScore-placeholder', path: '/HTML/COMPONENTS/mainPageTrustScore.html' },
         { selector: '#mainPageFeatureRow-placeholder', path: '/HTML/COMPONENTS/mainPageFeatureRow.html' },
         { selector: '#mainPageStatRow-placeholder', path: '/HTML/COMPONENTS/mainPageStatRow.html' },
+
+        // Navbar for signed in users
+        { selector: '#navbar-employee-placeholder', path: '/HTML/COMPONENTS/navbar-registered.html' },
+        { selector: '#sidebarEmployee-placeholder', path: '/HTML/COMPONENTS/sidebarEmployee.html' },
     ]);
 });

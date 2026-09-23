@@ -1,0 +1,247 @@
+.nav-wrap {
+    border-bottom: 3px solid rgba(0, 0, 0, 0.055);
+}
+
+.navbar {
+    padding: 10px 0;
+}
+
+/* Лого */
+.navbar-brand img {
+    width: 200px;
+    height: 50px;
+}
+
+/* Търсачка */
+.nav-search {
+    display: flex;
+    align-items: center;
+    background: #f1f3f5;
+    border-radius: 10px;
+    padding: 8px 15px;
+    width: 100%;
+    max-width: 500px;
+    transition: all 0.3s ease;
+}
+
+.nav-search:focus-within {
+    background: #ffffff;
+    box-shadow: 0 0 0 2px rgba(21, 77, 41, 0.2);
+}
+
+.nav-search svg {
+    color: #6c757d;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.nav-search input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.nav-search input::placeholder {
+    color: #adb5bd;
+}
+
+/* Камбанка */
+.nav-notification {
+    position: relative;
+    color: #154d29 !important;
+    padding: 8px 12px !important;
+    margin: 0 5px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.nav-notification:hover {
+    background: rgba(21, 77, 41, 0.08);
+}
+
+.nav-notification::after {
+    display: none;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    background: #dc3545;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+/* Профил */
+.nav-profile {
+    display: flex;
+    flex-direction: row;   
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px !important;
+    margin-left: 10px;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.nav-profile::after {
+    display: none;
+}
+
+.nav-profile:hover {
+    background: rgba(21, 77, 41, 0.08);
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #154d29;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    min-width: 0;          /* ← предотвратява свиване */
+    white-space: nowrap;   /* ← не позволява пренасяне */
+}
+
+.profile-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #154d29;
+}
+
+.profile-role {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.profile-arrow {
+    color: #154d29;
+    transition: transform 0.3s ease;
+}
+
+.nav-profile[aria-expanded="true"] .profile-arrow {
+    transform: rotate(180deg);
+}
+
+/* Dropdown menu */
+.navbar .dropdown-menu {
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 8px;
+    margin-top: 10px;
+    min-width: 200px;
+}
+
+.navbar .dropdown-item {
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    color: #333;
+    transition: background 0.2s ease;
+}
+
+.navbar .dropdown-item:hover {
+    background: rgba(21, 77, 41, 0.08);
+    color: #154d29;
+}
+
+/* Fallback за снимка на профила */
+.profile-avatar-fallback {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #154d29;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: 2px solid #154d29;
+    flex-shrink: 0;
+}
+
+/* Адаптивност */
+@media (max-width: 1200px) {
+    .nav-search {
+        max-width: 300px;
+        margin-left: -150px;
+        margin-right: -150px;
+    }
+
+}
+
+/* Адаптивност */
+@media (max-width: 1000px) {
+ /* Разкарай логото */
+    .navbar-brand {
+        display: none;
+    }
+
+}
+
+@media (max-width: 700px) {
+    .nav-search {
+        display: none;
+    }
+    
+    .nav-profile {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 150px;
+        height: 38px;
+    }
+    
+    .profile-avatar {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 350px) {
+    .navbar-brand img {
+        width: 130px;
+        height: 35px;
+    }
+    
+    .profile-avatar {
+        width: 30px;
+        height: 30px;
+    }
+
+    .profile-info {
+        display: none;
+    }
+    
+    .profile-arrow {
+        display: none;
+    }
+
+        .navbar-nav {
+        align-items: flex-start !important;
+        padding-top: 15px;
+        flex-direction: column !important;
+    }
+    
+}
