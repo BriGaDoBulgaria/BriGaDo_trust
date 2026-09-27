@@ -1,0 +1,109 @@
+/* ===== Секция ===== */
+.useful-resources-section {
+    width: 100%;
+    padding: 30px;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+}
+
+/* ===== Заглавие ===== */
+.useful-resources-title {
+    margin: 0 0 20px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #154d29;
+}
+
+/* ===== Grid ===== */
+.useful-resources-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ===== Card ===== */
+.useful-resource-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 18px;
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #154d29;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.useful-resource-card:hover {
+    border-color: #154d29;
+    box-shadow: 0 4px 12px rgba(21, 77, 41, 0.08);
+    transform: translateY(-2px);
+}
+
+/* ===== Икона ===== */
+.useful-resource-icon {
+    flex-shrink: 0;
+    color: #154d29;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.useful-resource-icon svg {
+    width: 26px;
+    height: 26px;
+}
+
+/* ===== Текст ===== */
+.useful-resource-text {
+    flex: 1;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #212529;
+    line-height: 1.3;
+}
+
+/* ===== Стрелка ===== */
+.useful-resource-arrow {
+    flex-shrink: 0;
+    color: #adb5bd;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.useful-resource-card:hover .useful-resource-arrow {
+    color: #154d29;
+    transform: translateX(3px);
+}
+
+/* ===== Респонсив ===== */
+
+/* Таблет – 2x2 */
+@media (max-width: 1024px) {
+    .useful-resources-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Мобилен – 1 колона */
+@media (max-width: 600px) {
+    .useful-resources-section {
+        padding: 20px 15px;
+    }
+
+    .useful-resources-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .useful-resource-card {
+        padding: 12px 15px;
+    }
+
+    .useful-resource-text {
+        font-size: 0.85rem;
+    }
+}

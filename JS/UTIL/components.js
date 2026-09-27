@@ -50,5 +50,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         // Navbar for signed in users
         { selector: '#navbar-employee-placeholder', path: '/HTML/COMPONENTS/navbar-registered.html' },
         { selector: '#sidebarEmployee-placeholder', path: '/HTML/COMPONENTS/sidebarEmployee.html' },
+
+        //Dashboard components
+        { selector: '#dashboard-trustScore-placeholder', path: '/HTML/COMPONENTS/DASH/trustScoreModule.html' },
+        { selector: '#monthlyStatus-placeholder', path: '/HTML/COMPONENTS/DASH/monthlyStatus.html' },
+        { selector: '#trustScoreChart-placeholder', path: '/HTML/COMPONENTS/DASH/trustScoreChart.html' },
+        { selector: '#criteriaScores-placeholder', path: '/HTML/COMPONENTS/DASH/criteriaScores.html' },
+        { selector: '#currentEmployer-placeholder', path: '/HTML/COMPONENTS/DASH/currentEmployer.html' },
+        { selector: '#recentRatings-placeholder', path: '/HTML/COMPONENTS/DASH/recentRatings.html' },
+        { selector: '#tipsRow-placeholder', path: '/HTML/COMPONENTS/DASH/tipsRow.html' }
     ]);
 });

@@ -1,0 +1,154 @@
+/* ===== Карта ===== */
+.current-employer-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    min-height: 350px !important;
+    font-family: inherit;
+}
+
+/* ===== Header ===== */
+.current-employer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.current-employer-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #154d29;
+}
+
+.current-employer-status {
+    background: #e6f2eb;
+    color: #154d29;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+/* ===== Company info ===== */
+.current-employer-company {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.current-employer-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.current-employer-company-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.current-employer-name {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #154d29;
+}
+
+.current-employer-position {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+/* ===== Details ===== */
+.current-employer-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.current-employer-detail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #495057;
+}
+
+.current-employer-detail svg {
+    color: #154d29;
+    flex-shrink: 0;
+}
+
+/* ===== Footer ===== */
+.current-employer-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.current-employer-contract {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #495057;
+}
+
+.current-employer-contract svg {
+    color: #154d29;
+    flex-shrink: 0;
+}
+
+.current-employer-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: 2px solid #154d29;
+    border-radius: 8px;
+    padding: 8px 14px;
+    color: #154d29;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.current-employer-btn:hover {
+    background: #154d29;
+    color: #ffffff;
+}
+
+.current-employer-btn:hover svg {
+    transform: translateX(3px);
+}
+
+.current-employer-btn svg {
+    transition: transform 0.3s ease;
+}
+
+/* ===== Адаптивност ===== */
+@media (max-width: 400px) {
+    .current-employer-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .current-employer-btn {
+        justify-content: center;
+    }
+}

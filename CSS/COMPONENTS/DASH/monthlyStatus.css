@@ -1,0 +1,178 @@
+/* ===== Карта ===== */
+.monthly-status-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 20px;
+    font-family: inherit;
+}
+
+/* ===== Header ===== */
+.monthly-status-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.monthly-status-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #212529;
+}
+
+.monthly-status-title svg {
+    color: #154d29;
+}
+
+.monthly-status-date {
+    font-size: 0.9rem;
+    color: #154d29;
+    font-weight: 500;
+}
+
+/* ===== Success Banner ===== */
+.monthly-status-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: #e6f2eb;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.monthly-status-icon {
+    width: 40px;
+    height: 40px;
+    background: #154d29;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.monthly-status-icon svg {
+    color: #ffffff;
+    width: 20px;
+    height: 20px;
+}
+
+.monthly-status-text h6 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #154d29;
+}
+
+.monthly-status-text p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #495057;
+    line-height: 1.4;
+}
+
+/* ===== Period Info ===== */
+.monthly-status-period {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+}
+
+.monthly-status-period p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #6c757d;
+    line-height: 1.6;
+}
+
+/* ===== Button ===== */
+.monthly-status-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px solid #154d29;
+    border-radius: 8px;
+    color: #154d29;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* resize button between 1300 and 1200 */
+@media (max-width: 1300px) and (min-width: 1200px) {
+    .monthly-status-btn {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+        max-height: 30px;
+    }
+}
+
+.monthly-status-btn:hover {
+    background: #154d29;
+    color: #ffffff;
+}
+
+.monthly-status-btn:hover svg {
+    transform: translateX(4px);
+}
+
+.monthly-status-btn svg {
+    transition: transform 0.3s ease;
+}
+
+/* ===== Адаптивност ===== */
+@media (max-width: 480px) {
+    .monthly-status-card {
+        padding: 15px;
+    }
+    
+    .monthly-status-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .monthly-status-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 480px) {
+    .monthly-status-card {
+        min-height: 350px !important;
+        max-height: 350px !important;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .monthly-status-card {
+        padding: 15px;
+    }
+    
+    .monthly-status-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .monthly-status-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

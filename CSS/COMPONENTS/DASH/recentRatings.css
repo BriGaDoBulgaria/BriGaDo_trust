@@ -1,0 +1,152 @@
+/* ===== Карта ===== */
+.recent-ratings-card {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    font-family: inherit;
+    min-height: 350px !important;
+}
+
+/* ===== Header ===== */
+.recent-ratings-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.recent-ratings-title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #154d29;
+}
+
+.recent-ratings-see-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #154d29;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: gap 0.2s ease;
+}
+
+.recent-ratings-see-all:hover {
+    gap: 10px;
+}
+
+/* ===== Списък ===== */
+.recent-ratings-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Елемент ===== */
+.recent-rating-item {
+    display: grid;
+    grid-template-columns: 110px 1fr 70px 20px;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.recent-rating-item:last-child {
+    border-bottom: none;
+}
+
+.recent-rating-item:hover {
+    background: rgba(21, 77, 41, 0.03);
+    border-radius: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+/* ===== Месец ===== */
+.recent-rating-month {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #495057;
+}
+
+/* ===== Звезди ===== */
+.recent-rating-stars {
+    display: flex;
+    gap: 2px;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.star {
+    color: #e9ecef;
+}
+
+.star.filled {
+    color: #f5b301;
+}
+
+.star.half {
+    background: linear-gradient(90deg, #f5b301 50%, #e9ecef 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ===== Score ===== */
+.recent-rating-score {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #154d29;
+    white-space: nowrap;
+}
+
+/* ===== Стрелка ===== */
+.recent-rating-arrow {
+    color: #adb5bd;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.recent-rating-item:hover .recent-rating-arrow {
+    color: #154d29;
+    transform: translateX(3px);
+}
+
+/* ===== Адаптивност ===== */
+@media (max-width: 480px) {
+    .recent-ratings-card {
+        padding: 15px;
+    }
+
+    .recent-rating-item {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        gap: 6px;
+    }
+
+    .recent-rating-month {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .recent-rating-arrow {
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+
+    .recent-rating-stars {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .recent-rating-score {
+        grid-column: 1;
+        grid-row: 2;
+        justify-self: end;
+    }
+}
