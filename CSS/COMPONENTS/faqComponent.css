@@ -1,0 +1,100 @@
+/* ===== Секция ===== */
+.faq-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.faq-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #154d29;
+    margin-bottom: 10px;
+}
+
+.faq-subtitle {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* ===== Акордеон контейнер ===== */
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ===== Елемент ===== */
+.faq-item {
+    background: #ffffff;
+    border: 1px solid #e9ecef !important;
+    border-radius: 10px !important;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* ===== Бутон (Заглавие) ===== */
+.faq-item .accordion-button {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #212529;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: none !important;
+    transition: all 0.3s ease;
+}
+
+/* Когато е отворен */
+.faq-item .accordion-button:not(.collapsed) {
+    color: #154d29;
+    background-color: #e6f2eb;
+}
+
+/* Фокус */
+.faq-item .accordion-button:focus {
+    border-color: #154d29;
+    box-shadow: 0 0 0 0.25rem rgba(21, 77, 41, 0.1) !important;
+}
+
+/* Иконата (стрелката) */
+.faq-item .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23154d29'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.faq-item .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23154d29'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* ===== Тяло (Отговор) ===== */
+.faq-item .accordion-body {
+    font-size: 0.95rem;
+    color: #495057;
+    line-height: 1.6;
+    padding: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+/* ===== Мобилна версия ===== */
+@media (max-width: 600px) {
+    .faq-section {
+        padding: 40px 15px;
+    }
+
+    .faq-title {
+        font-size: 1.5rem;
+    }
+
+    .faq-item .accordion-button {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+
+    .faq-item .accordion-body {
+        font-size: 0.85rem;
+        padding: 15px;
+    }
+}
