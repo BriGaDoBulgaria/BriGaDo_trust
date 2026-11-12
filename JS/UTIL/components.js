@@ -60,7 +60,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         { selector: '#recentRatings-placeholder', path: '/HTML/COMPONENTS/DASH/recentRatings.html' },
         { selector: '#tipsRow-placeholder', path: '/HTML/COMPONENTS/DASH/tipsRow.html' },
 
-      ///faq
-        { selector: '#faq-placeholder', path: '/HTML/COMPONENTS/faqComponent.html' }
+        //faq
+        { selector: '#faq-placeholder', path: '/HTML/COMPONENTS/faqComponent.html' },
+
+        //registration select
+        { selector: '#regselection-placeholder', path: '/HTML/COMPONENTS/registerSelectionPage.html' }
+
     ]);
 });

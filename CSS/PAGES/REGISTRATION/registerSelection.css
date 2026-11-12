@@ -1,0 +1,169 @@
+/* ===== Основа ===== */
+.register-selection-page {
+    min-height: calc(100vh - 70px);
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* ===== Header ===== */
+.selection-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.selection-header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #154d29;
+    margin-bottom: 15px;
+}
+
+.selection-header p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ===== Grid ===== */
+.selection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ===== Карта ===== */
+.selection-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #ffffff;
+    border: 2px solid #e9ecef;
+    border-radius: 16px;
+    padding: 35px 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.selection-card:hover {
+    border-color: #154d29;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(21, 77, 41, 0.1);
+}
+
+/* ===== Икона ===== */
+.card-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.selection-card:hover .card-icon {
+    transform: scale(1.1);
+}
+
+.employee-icon {
+    background: #e6f2eb;
+    color: #154d29;
+}
+
+.employer-icon {
+    background: #e8f4fc;
+    color: #0d6efd;
+}
+
+.agency-icon {
+    background: #fdf3e7;
+    color: #d97706;
+}
+
+/* ===== Текст ===== */
+.selection-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #212529;
+    margin-bottom: 12px;
+}
+
+.selection-card p {
+    font-size: 0.9rem;
+    color: #6c757d;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    flex-grow: 1; /* Избутва бутона надолу */
+}
+
+/* ===== Бутон ===== */
+.card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #154d29;
+    transition: gap 0.3s ease;
+}
+
+.selection-card:hover .card-btn {
+    gap: 12px; /* Стрелката се отмества */
+}
+
+/* ===== Footer ===== */
+.selection-footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+.selection-footer a {
+    color: #154d29;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.selection-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Респонсив ===== */
+@media (max-width: 992px) {
+    .selection-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .register-selection-page {
+        padding: 40px 15px;
+    }
+
+    .selection-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .selection-header p {
+        font-size: 1rem;
+    }
+
+    .selection-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .selection-card {
+        padding: 30px 20px;
+    }
+}
